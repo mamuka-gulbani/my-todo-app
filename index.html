@@ -1,81 +1,167 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Todo List</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-	<script type="text/javascript" src="angular.js"></script>
+	<meta charset="UTF-8">
+  	<meta name="description" content="Google Store Georgia">
+  	<meta name="keywords" content="smartphone,android,pixel,georgia,google,camera,cameraphone,smart,gadgets">
+  	<meta name="author" content="Mamuka Gulbani">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Google Store Georgia</title>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/responsive.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="js/index.js"></script>
 </head>
-<style>
-	body{
-		margin: 0;
-		padding: 0;
-		text-align: center;
-		background-image: url(nm.jpg);
-	}
-	input[type=text]{
-		height: 35px;
-		width: 300px;
-		outline: none;
-		border-radius: 5px;
-	}
-	input[type=checkbox]{
-		cursor: pointer;
-		padding-left: 5px;
-	}
-	span{
-		padding-left: 20px;
-	}
-	.jumbotron{
-		background-color:  #ff4d4d;
-		font-size: 35px;
-		padding: 4%;
-		font-family: monospace;
-	}
-	.task{
-		font-size: 15px;
-	}
-	th{
-		background-color:  #ff4d4d;
-		font-size: 18px;
-	}
-	.row{
-		justify-content: center;
-		display: flex;
-	}
-	.col-md-12{
-		width: 40%;
-	}
-	#close{
-		float: right;
-		padding-right: 5px;
-		cursor: pointer;
-	}
-</style>
-<body class="container" ng-app="myApp" ng-controller="todoCtrl">
-	<div class="jumbotron">My To-do-List</div>
-	<form ng-submit="todoAdd()">
-		<input type="text" ng-model="todoinput" required="" placeholder="Type New Task">
-		<input type="submit" class="btn btn-success" value="Add New" style="margin-top: -3px">
-	</form>
-	     <br>
-	     <div class="container">
-	     	<div class="row">
-	     		
-	 <div class="col-md-12">
-	 	<table class="table table-bordered table-hover" style="background-color: white;">
-	 		<tr>
-	 			<th class="text-center">Tasks</th>
-	 		</tr>
+<body>
+	<section>
+		<!-- Simulate a smartphone / tablet -->
+<div class="mobile-container">
 
-	 		<tr ng-repeat="x in todolist" class="text-left" style="margin-left: -20px;">
-	 		<td>
-	 			<input type="checkbox" ng-model="x.done"><span class="task" ng-bind="x.todoText"></span><span id="close" ng-click="remove()">&times;</span>
-	 		</tr>
-	 	</table>
+<!-- Top Navigation Menu -->
+<div class="topnav">
+  <a href="#home" class="active">This is Google Store Website</a>
+  <div id="myLinks">
+    <a href="news.html">Tech Blog</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="subscribe.html">Subscribe</a>
+  </div>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+
+
+<!-- End smartphone / tablet look -->
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+	</section>
+
+	<div class="container">
+		<header class="header">
+		<!-- 	<a href="index.html">
+		<img src="img/googlelogo.png" alt="logo" class="img"> -->
+			<div class="header-div">
+			</div>
+			<nav>
+				<ul class="nav-ul">
+					<li class="nav-li">
+						<a href="news.html" class="nav-a"><!-- TECH BLOG --></a>
+					</li>
+					<li class="nav-li" class="nav-a">
+						<a href="contact.html" class="nav-a"><!-- CONTACT US --></a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<div class="store-geo">
+			<h1>Google Store Georgia</h1>
+		</div>
+		<div class="button-box">
+			<button type="button" class="button"><a href="subscribe.html" target="_blank" class="spec">Special Offers</button></a>
 		</div>
 	</div>
-   </div>
-   <button class="btn btn-danger" ng-click="remove()" style="background-color: red;">Remove marked</button>
+	<section class="section-3">
+		<div class="pixel-geo">
+			<h2 class="pixel-head">We are Official Dealer of Google Smart Products in Georgia!</h2>
+			<p class="pixel-p">Productivity, comfort, reasonable prices, quality, simplicity, versatility, speed and power - that's all we offer.</p>	
+		</div>
+	</section>
+		</div>
+	</section>
+	<section class="section-google">
+		<h3 class="google-h3">Meet Google Smartphones</h3>
+		<p class="google-2p">Google Pixel is a brand of consumer electronic devices developed by Google that run either Chrome OS or the Android operating system. </p>
+		<p class="google-2p">The Pixel brand was introduced in February 2013 with the first-generation Chromebook Pixel. The Pixel line includes laptops, tablets, and smartphones, as well as several accessories. </p>
+		<div class="wraper-div">
+			<div class="wraper">
+				<div class="wraper-c">
+					<div>
+						<a href="https://www.gsmarena.com/google_pixel-8346.php" target="_blank"><img class="wraper-img" src="img/pixel-img.jpeg"></a>
+					</div>
+					<p class="google-p">Google Pixel One</p>
+				</div>
+			</div>
+			<div class="wraper">
+				<div class="wraper-c">
+					<div>
+						<a href="https://www.gsmarena.com/google_pixel_2_xl-8720.php" target="_blank"><img class="wraper-img" src="img/google-pixel-xl2.jpg"></a>
+					</div>
+					<p class="google-p">Google Pixel 2nd Generation</p>
+				</div>
+			</div>
+			<div class="wraper">
+				<div class="wraper-c">
+					<div>
+						<a href="https://www.gsmarena.com/google_pixel_3-9256.php" target="_blank"><img class="wraper-img" src="img/google-pixel-3.jpg"></a>				
+					</div>
+					<p class="google-p">Google Pixel 3rd Generation</p>
+				</div>
+			</div>
+			<div class="wraper">
+				<div class="wraper-c">
+					<div>
+						<a href="https://www.gsmarena.com/google_pixel_3a-9408.php" target="_blank"><img class="wraper-img" src="img/google-pixel-3a.png"></a>				
+					</div>
+					<p class="google-p">Google Pixel 3a</p>
+				</div>
+			</div>
+			<div class="wraper">
+				<div class="wraper-c">
+					<div>
+						<a href="https://www.gsmarena.com/google_pixel_4-9896.php" target="_blank"><img class="wraper-img" src="img/google-pixel-4.jpg"></a>				
+					</div>
+					<p class="google-p">Google Pixel 4th</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="section-4">
+		<div class="sec-4-header">
+			<h2 class="sec-4-h1">Recommendations from us</h2>
+			<p class="sec-4-p1">Smartphones have become our indispensable helpers, friends, second brain or just a favorite item today.</p>
+			<p class="sec-4-p1">We know that it is desirable for you to be equipped with high quality and multifunctional, as well as aesthetic.</p>
+		</div>
+		<div class="bigwraper">
+			<div class="div">
+				<h3 class="sec-4-header">Do you want to save money and have one of the best cameraphone?</h3>
+				<p class="sec-4-p">Google Pixel 3a or 3a XL Version is for you.</p>				
+				<button type="button" class="button-1"><a href="https://www.youtube.com/watch?v=XnSqlX1kCQo" target="_blank" class="Click"> Click here for more details.
+				</a></button>
+			</div>	
+		 	<div class="div">
+			</div>
+		 	<div class="div">
+			</div>
+		 	<div class="div">
+				<h3 class="sec-4-header">Do you want a King of the Flagships?</h3>
+				<p class="sec-4-p">try this smartphone,it is what you always want</p>
+				<button type="button" class="button-1"><a href="https://www.youtube.com/watch?v=mfbSqTB74xM" target="_blank" class="Click"> Click here for more details.</a></button>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="footer">
+			<a href="https://www.facebook.com/madebygoogle" target="_blank" class="fa fa-facebook"></a>
+			<a href="https://twitter.com/madebygoogleh" target="_blank" class="fa fa-twitter"></a>
+			<a href="https://www.youtube.com/madebygoogle" target="_blank" class="fa fa-youtube"></a>
+			<a href="https://www.instagram.com/madebygoogle/" target="_blank" class="fa fa-instagram"></a>
+			<h5 class="copyright">Copyright 2020. All Rights Reserved.</h5>
+		</div>
+	</footer>
 </body>
 </html>
